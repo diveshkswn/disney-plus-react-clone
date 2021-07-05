@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Home from './components/Home';
 
-// 9 : 00
 function App() {
   return (
     <div className="App">
-
-      Hello React app
-
+      <Header />
+      <Home />
     </div>
   );
 }

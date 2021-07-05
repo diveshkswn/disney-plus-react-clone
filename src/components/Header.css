@@ -1,0 +1,30 @@
+.header_main{
+    padding: 5px 30px;
+    height: 70px;
+    background-color: var(--header-bgColor);
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.header_navmenu a{
+display: flex;
+align-items: center;
+padding: 0px 15px;
+}
+
+
+.header_navmenu a>img{
+    height: 20px;
+    margin: 0 5px;
+}
+
+.header_navmenu a>span{
+    font-size: 13px;
+    letter-spacing: 1.42px;
+}
+
+.header_logo{
+    width: 80px ;
+}
