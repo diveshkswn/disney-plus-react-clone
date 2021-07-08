@@ -6,7 +6,7 @@
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
   color: white;
   overflow-x: hidden;
   margin: 0;
@@ -22,4 +22,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@media(max-width:800px){
+  body{
+    width: 101vw;
+  }
 }
