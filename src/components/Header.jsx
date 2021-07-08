@@ -1,8 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import './Header.css';
-
-// 40 : 17
+// 01:02
 function Header() {
   return (
     <div className="header_main">
