@@ -1,0 +1,120 @@
+.detail_main {
+    padding : 10px calc(3.5vw + 5px);
+    position: relative;
+}
+
+.detail_bg {
+
+    position: fixed;
+    top     : 70px;
+    left    : 0;
+    bottom  : 0;
+    right   : 0;
+    z-index : -1;
+    opacity : 0.3;
+
+}
+
+.detail_bg img {
+    width     : 100%;
+    height    : 70%;
+    object-fit: cover;
+
+}
+
+.detail_title {
+    height: 30vh;
+    width : 35vw;
+}
+
+.detail_title img {
+    width     : 100%;
+    height    : 100%;
+    object-fit: contain;
+}
+
+
+/* action buttons styling */
+.details_controls {
+    display       : flex;
+    flex-direction: row;
+    gap           : 10px;
+}
+
+.details_playButton {
+    height          : 56px;
+    border          : 4px;
+    font-size       : 15px;
+    display         : flex;
+    align-items     : center;
+    background-color: rgba(249, 249, 249);
+    padding         : 0px 24px;
+    margin-right    : 22px;
+    letter-spacing  : 1.8px;
+    cursor          : pointer;
+}
+
+.details_playButton:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+
+.details_trailerButton {
+    height          : 56px;
+    border          : 4px;
+    font-size       : 15px;
+    display         : flex;
+    align-items     : center;
+    background-color: rgba(0, 0, 0, .7);
+    border          : 1px solid white;
+    color           : white;
+    padding         : 0px 24px;
+    margin-right    : 22px;
+    letter-spacing  : 1.8px;
+    cursor          : pointer;
+}
+
+.details_trailerButton:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+.details_addButton {
+    width           : 45px;
+    height          : 45px;
+    border-radius   : 50%;
+    border          : 2px solid white;
+    background-color: rgba(0, 0, 0, .7);
+    cursor          : pointer;
+}
+
+.details_addButton span {
+    color    : white;
+    font-size: 30px;
+}
+
+.details_grpWatchButton {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 45px;
+    height          : 45px;
+    border-radius   : 50%;
+    border          : 2px solid white;
+    background-color: rgba(0, 0, 0, .7);
+    cursor          : pointer;
+}
+
+
+/* mobile device styling */
+@media (max-width : 800px) {
+    .detail_bg img {
+        height: 50vh;
+    }
+
+    .details_controls {
+        width         : 50vw;
+        gap           : 10px;
+        flex-direction: column;
+    }
+}
