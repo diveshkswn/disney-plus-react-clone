@@ -22,7 +22,7 @@ function ImageSlider() {
       <Slider {...settings}>
 
         <div className="imageSlider_wrap">
-          <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1681/1011681-h-ac6ee255f074" alt="slider_img" className="imageSlider_img" />
+          <img style={{ objectFit: 'cover' }} src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1681/1011681-h-ac6ee255f074" alt="slider_img" className="imageSlider_img" />
 
         </div>
         <div className="imageSlider_wrap">

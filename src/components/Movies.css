@@ -1,0 +1,37 @@
+.movies_content {
+    text-align           : center;
+    display              : grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap           : 25px;
+    row-gap              : 20px;
+
+
+}
+
+
+.movies_wrap img {
+    border-radius: 10px;
+    width        : 70%;
+    object-fit   : cover;
+    border       : 3px solid rgba(249, 249, 249, 0.1);
+    box-shadow   : 0px 26px 30px -10px black,
+        0px 26px 30px -10px black;
+    transition: transform 250ms 150ms ease-in;
+}
+
+.movies_wrap:hover img {
+    cursor      : pointer;
+    transform   : scale(1.09);
+    border-color: rgba(249, 249, 249, 0.7);
+}
+
+
+@media(max-width : 800px) {
+    .movies_content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .movies_wrap img {
+        width: 100%;
+    }
+}
