@@ -1,9 +1,14 @@
+.movies_main {
+    margin-bottom: 50px;
+}
+
 .movies_content {
     text-align           : center;
     display              : grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap           : 25px;
     row-gap              : 20px;
+
 
 
 }

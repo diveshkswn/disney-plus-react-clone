@@ -28,6 +28,13 @@ function Detail() {
           <img src="/images/group-icon.png" alt="" />
         </button>
       </div>
+      <div className="details_subtitle">
+        Superhero Marvel U/A 13+
+      </div>
+      <div className="details_description">
+        After stealing the Tesseract in “Avengers: Endgame,”
+        Loki lands before the Time Variance Authority.
+      </div>
     </div>
   );
 }

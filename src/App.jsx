@@ -5,12 +5,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
 } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/pages/Home';
 import Detail from './components/Detail';
+import Login from './components/pages/Login';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/detail" component={Detail} />
-
+          <Route exact path="/login" component={Login} />
           {/* Default path */}
           <Route path="*">
             <Redirect to="/" />
