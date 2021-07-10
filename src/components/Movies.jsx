@@ -1,7 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './Movies.css';
 
 function Movies() {
+  const movies = useSelector((state) => state.movie.movies);
+  console.log(movies);
+
+  function populateMovies(movie) {
+    return (
+      <div key={movie.id} className="movies_wrap">
+        <img src={movie.cardImg} alt="" />
+      </div>
+    );
+  }
+
   return (
     <div className="movies_main">
       <h4>Recommended For You</h4>
@@ -25,6 +37,8 @@ function Movies() {
         <div className="movies_wrap">
           <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4971/674971-v" alt="" />
         </div>
+
+        {movies && movies.map(populateMovies)}
       </div>
     </div>
   );
