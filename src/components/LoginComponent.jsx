@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { login } from '../context/authContext';
 import './LoginComponent.css';
 
 function LoginComponent() {
@@ -10,8 +11,18 @@ function LoginComponent() {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    try {
+      setError('');
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      // window.location.href = '/';
+      history.push('/');
+    } catch (er) {
+      setError(er.message);
+    }
+    setLoading(false);
   }
   return (
     <div className="LoginComponent_main">

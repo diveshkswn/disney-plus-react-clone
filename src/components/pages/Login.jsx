@@ -3,10 +3,15 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import LoginComponent from '../LoginComponent';
 import SignupComponent from '../SignupComponent';
+import { useAuth } from '../../context/authContext';
 
 function Login() {
+  const { currentUser } = useAuth();
+  const history = useHistory();
+  if (currentUser) history.push('/');
   const loginFormState = useSelector((state) => state.loginForm.value);
 
   const [signupState, setSignupState] = useState(false);

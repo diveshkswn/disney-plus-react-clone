@@ -4,15 +4,22 @@
     padding         : 20px;
     border-radius   : 20px;
     margin          : 10px;
+    width           : 30vw;
 }
 
 .singup_form {
-    width          : 280px;
-    height         : 400px;
-    display        : flex;
-    flex-direction : column;
-    text-align     : left;
+    max-width     : 100%;
+    height        : 400px;
+    display       : flex;
+    flex-direction: column;
+    text-align    : center;
+
     justify-content: space-around;
+    flex-wrap      : wrap;
+}
+
+.error_banner {
+    max-lines: 3;
 }
 
 .singup_form>input {
@@ -37,4 +44,15 @@
 
 .login_redirect {
     cursor: pointer;
+}
+
+.error_banner {
+    color: red;
+}
+
+
+@media(max-width : 800px) {
+    .SignupComponent_main {
+        width: 80vw;
+    }
 }

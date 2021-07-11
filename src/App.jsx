@@ -11,27 +11,28 @@ import Header from './components/Header';
 import Home from './components/pages/Home';
 import Detail from './components/Detail';
 import Login from './components/pages/Login';
+import AuthProvider from './context/authContext';
 
 function App() {
   return (
+    <AuthProvider>
+      <div className="App">
+        <Router>
+          {/* Navbar */}
+          <Header />
 
-    <div className="App">
-      <Router>
-        {/* Navbar */}
-        <Header />
-
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/detail" component={Detail} />
-          <Route exact path="/login" component={Login} />
-          {/* Default path */}
-          <Route path="*">
-            <Redirect to="/" />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/detail" component={Detail} />
+            <Route exact path="/login" component={Login} />
+            {/* Default path */}
+            <Route path="*">
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </AuthProvider>
   );
 }
 
