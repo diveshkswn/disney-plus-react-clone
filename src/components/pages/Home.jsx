@@ -12,7 +12,9 @@ function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (docs.length > 0) dispatch(setMovies(docs));
+    if (docs.length > 0) {
+      dispatch(setMovies(docs));
+    }
   }, [docs.length]);
 
   return (

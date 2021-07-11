@@ -4,6 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE = {
   movies: [],
+  currentMovie: {},
 };
 
 const movieSlice = createSlice({
@@ -13,10 +14,13 @@ const movieSlice = createSlice({
     setMovies: (state, action) => {
       state.movies = [...action.payload];
     },
+    setCurrentMovie: (state, action) => {
+      state.currentMovie = action.payload;
+    },
   },
 });
 
-export const { setMovies } = movieSlice.actions;
+export const { setMovies, setCurrentMovie } = movieSlice.actions;
 
 export const selectMovies = (state) => state.movie.movies;
 

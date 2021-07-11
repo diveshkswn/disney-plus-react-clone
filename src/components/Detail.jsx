@@ -1,16 +1,28 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React from 'react';
+import { current } from '@reduxjs/toolkit';
+import { useHistory } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import './Detail.css';
+import Movies from './Movies';
 
 function Detail() {
+  const history = useHistory();
+  const currentMovie = useSelector((state) => state.movie.currentMovie);
+  useEffect(() => {
+    if (!currentMovie.id) {
+      history.push('/');
+    }
+  }, []);
+
   return (
     <div className="detail_main">
       <div className="detail_bg">
-        <img src="https://images.indianexpress.com/2021/05/loki-1200.jpg" alt="" />
+        <img src={currentMovie.backgroundImg} alt="" />
       </div>
       <div className="detail_title">
-        <img src="/images/loki_png.png" alt="" />
+        <img src={currentMovie.titleImg} alt="" />
       </div>
       <div className="details_controls">
         <button className="details_playButton">
@@ -28,13 +40,13 @@ function Detail() {
           <img src="/images/group-icon.png" alt="" />
         </button>
       </div>
-      <div className="details_subtitle">
-        Superhero Marvel U/A 13+
-      </div>
       <div className="details_description">
-        After stealing the Tesseract in “Avengers: Endgame,”
-        Loki lands before the Time Variance Authority.
+        {currentMovie.subTitle}
       </div>
+      <div className="details_subtitle">
+        {currentMovie.description}
+      </div>
+
     </div>
   );
 }

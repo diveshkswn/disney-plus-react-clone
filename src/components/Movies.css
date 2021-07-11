@@ -6,18 +6,19 @@
     text-align           : center;
     display              : grid;
     grid-template-columns: repeat(6, 1fr);
-    column-gap           : 10px;
+    column-gap           : 50px;
     row-gap              : 40px;
+    margin-bottom        : 50px;
 
 
 
 }
 
-.movies_wrap {
+/* .movies_wrap {
     height: 250px;
     width : 180px;
 
-}
+} */
 
 
 .movies_wrap img {
@@ -42,15 +43,16 @@
 @media(max-width : 800px) {
     .movies_content {
         grid-template-columns: repeat(3, 1fr);
+        column-gap           : 30px;
     }
 
     .movies_wrap img {
         width: 100%;
     }
 
-    .movies_wrap {
+    /* .movies_wrap {
         height: 25vh;
         width : 25vw;
 
-    }
+    } */
 }
