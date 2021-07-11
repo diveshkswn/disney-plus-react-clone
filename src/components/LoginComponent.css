@@ -1,0 +1,35 @@
+.LoginComponent_main {
+    background-color: rgba(38, 31, 87, 0.322);
+    backdrop-filter : blur(3px);
+    padding         : 20px;
+    border-radius   : 20px;
+    margin          : 10px;
+}
+
+.login_form {
+    width          : 250px;
+    height         : 250px;
+    display        : flex;
+    flex-direction : column;
+    text-align     : left;
+    justify-content: space-around;
+}
+
+.login_form>input {
+    height: 35px;
+}
+
+.btn {
+    color           : white;
+    cursor          : pointer;
+    width           : 100%;
+    background-color: #0063e5;
+    font-weight     : bold;
+    padding         : 15px;
+    border-radius   : 4px;
+    letter-spacing  : 2px;
+}
+
+.btn:active {
+    background-color: #0352b9;
+}
