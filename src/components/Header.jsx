@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable import/no-unresolved */
@@ -11,17 +12,18 @@ function Header() {
   const { currentUser } = useAuth();
   if (!currentUser) history.push('/login');
 
-  console.log(currentUser);
+  // console.log(currentUser);
   const [logoutPanel, setLogoutPanel] = useState(false);
   return (
     <div className="header_main">
       <img src="/images/Logo.svg" alt="Logo_Img" className="header_logo" />
       <div className="header_navmenu">
-        <a href="/">
-          <img src="/images/home-icon.svg" alt="nav_links" />
-          <span>Home</span>
-        </a>
-
+        <Link to="/">
+          <a>
+            <img src="/images/home-icon.svg" alt="nav_links" />
+            <span>Home</span>
+          </a>
+        </Link>
         <a href="/">
           <img src="/images/search-icon.svg" alt="nav_links" />
           <span>Search</span>
